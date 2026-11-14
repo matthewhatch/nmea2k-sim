@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-13",
+  "display_backend": "native Qt xcb in isolated Xvfb",
+  "rendering": "software",
+  "qt_version": "6.8.3",
+  "host_architecture": "x86_64",
+  "channel": "vcan0",
+  "source": 237,
+  "engine_instance": 1,
+  "telemetry_status": "fresh",
+  "rpm": 2961.0,
+  "temperature_c": 25.710000000000036,
+  "snapshot_sha256": "41add4719870bbaf93fe746bb38e8466e8ebc0514158957fa8f95a7c39bbacae",
+  "screenshot_sha256": "565cc10d5dc2c03a652c3285fb51224f18fe77980a595c54a110974253fd481e",
+  "method": "scripts/capture_dashboard.py with separate simulator and SocketCAN receiver processes",
+  "physical_can_transmission": false
+}

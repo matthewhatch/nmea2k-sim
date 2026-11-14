@@ -1,0 +1,44 @@
+{
+  "profile": "cycle",
+  "messages_compared": 308,
+  "per_pgn": {
+    "127488": 256,
+    "127489": 52
+  },
+  "engine_ranges": {
+    "rpm": {
+      "min": 0.0,
+      "max": 4500.0
+    },
+    "trim_pct": {
+      "min": -4,
+      "max": 12
+    },
+    "oil_pressure_pa": {
+      "min": 0,
+      "max": 400000
+    },
+    "coolant_temperature_k": {
+      "min": 293.15000000000003,
+      "max": 311.57
+    },
+    "alternator_voltage_v": {
+      "min": 12.6,
+      "max": 14.200000000000001
+    },
+    "fuel_rate_lph": {
+      "min": 0.0,
+      "max": 35.0
+    },
+    "engine_hours": {
+      "min": 100.0,
+      "max": 100.01222222222222
+    }
+  },
+  "canboat_version": "9.2.0",
+  "analyzer_sha256": "b9517c2410d0a5016392b15fe31144f6c03c755350f95aee4842c19ff833c73b",
+  "converter_sha256": "c64b25c068bc200410d51351d8fae6a2b9ebb97563e5692d1f35821ebd5a3e2d",
+  "decoded_sha256": "8a18a00c43dc204ee26ea47718b2671eb266e499c5caa0990bce8158fef5684a",
+  "canboat_revision": "2a42e004e01094b25049dddf737277f33c324ff1",
+  "capture_sha256": "914505243461061a8cd0b25a93c11cffde1df9ad8e15d12bc8c844be06045c09"
+}

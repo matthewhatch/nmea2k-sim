@@ -1,0 +1,16 @@
+[
+  "claim then >=250ms wait before engine TX, instance 2",
+  "ISO request 60928 destination 210: response decoded",
+  "ISO request 126996 destination 210: response decoded",
+  "ISO request 126998 destination 210: response decoded",
+  "ISO request 126464 destination 210: response decoded",
+  "ISO request 60928 destination 255: response decoded",
+  "ISO request 126996 destination 255: response decoded",
+  "ISO request 126998 destination 255: response decoded",
+  "ISO request 126464 destination 255: response decoded",
+  "directed 127508: NACK",
+  "directed 126993: NACK",
+  "unsupported global and other-destination requests: no response",
+  "winning conflict reasserted 210; losing conflict moved to 211; both gated",
+  "identity request and periodic heartbeat received at new source 211"
+]

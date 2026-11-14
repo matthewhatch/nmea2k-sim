@@ -1,0 +1,2311 @@
+{
+  "channel": "vcan0",
+  "connection": "connected",
+  "connection_detail": "Listening on vcan0 \u00b7 receive only",
+  "view": {
+    "key": "237:1",
+    "source": 237,
+    "instance": 1,
+    "status": "fresh",
+    "running": "Running",
+    "rapid_fresh": true,
+    "dynamic_fresh": true,
+    "rapid_age": 0.25036950199864805,
+    "dynamic_age": 0.848413473002438,
+    "rpm": 2961.0,
+    "trim": 5,
+    "temperature_c": 25.710000000000036,
+    "voltage_v": 14.200000000000001,
+    "oil_pressure_bar": 3.0,
+    "fuel_rate_lph": 18.3,
+    "engine_hours": 100.00333333333333,
+    "high_temperature": false,
+    "low_oil_pressure": false,
+    "low_voltage": false,
+    "warnings": [],
+    "warning_known": true,
+    "status1": 0,
+    "status2": 0
+  },
+  "engines": [
+    {
+      "key": "237:1",
+      "label": "Engine 1  \u00b7  Source 237"
+    }
+  ],
+  "stats": {
+    "received": 138,
+    "malformed": 0,
+    "dropped": 0,
+    "fast_errors": {},
+    "decoded_count": 93,
+    "rate": 9.0,
+    "fast_error_count": 0,
+    "engine_count": 1
+  },
+  "diagnostics": [
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607136.0544605,
+      "timestamp_text": "1794607136.054461",
+      "payload": "01 44 2E FF FF 05 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2961.0,
+        "boost_pa": null,
+        "trim": 5
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2961.0, \"boost_pa\": null, \"trim\": 5}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607135.854443,
+      "timestamp_text": "1794607135.854443",
+      "payload": "01 87 2C FF FF 05 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2849.75,
+        "boost_pa": null,
+        "trim": 5
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2849.75, \"boost_pa\": null, \"trim\": 5}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607135.6543834,
+      "timestamp_text": "1794607135.654383",
+      "payload": "01 C6 2A FF FF 04 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2737.5,
+        "boost_pa": null,
+        "trim": 4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2737.5, \"boost_pa\": null, \"trim\": 4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607135.4544978,
+      "timestamp_text": "1794607135.454498",
+      "payload": "C3 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 300000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 298.86,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 18.3,
+        "engine_hours": 100.00333333333333,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 300000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 298.86, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 18.3, \"engine_hours\": 100.00333333333333, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607135.4544923,
+      "timestamp_text": "1794607135.454492",
+      "payload": "C2 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607135.4544854,
+      "timestamp_text": "1794607135.454485",
+      "payload": "C1 74 8C 05 B7 00 4C 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607135.4544766,
+      "timestamp_text": "1794607135.454477",
+      "payload": "C0 1A 01 B8 0B FF FF BE",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607135.454365,
+      "timestamp_text": "1794607135.454365",
+      "payload": "01 04 29 FF FF 04 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2625.0,
+        "boost_pa": null,
+        "trim": 4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2625.0, \"boost_pa\": null, \"trim\": 4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607135.2543597,
+      "timestamp_text": "1794607135.254360",
+      "payload": "01 43 27 FF FF 04 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2512.75,
+        "boost_pa": null,
+        "trim": 4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2512.75, \"boost_pa\": null, \"trim\": 4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607135.054433,
+      "timestamp_text": "1794607135.054433",
+      "payload": "01 82 25 FF FF 03 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2400.5,
+        "boost_pa": null,
+        "trim": 3
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2400.5, \"boost_pa\": null, \"trim\": 3}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607134.8544593,
+      "timestamp_text": "1794607134.854459",
+      "payload": "01 C5 23 FF FF 03 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2289.25,
+        "boost_pa": null,
+        "trim": 3
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2289.25, \"boost_pa\": null, \"trim\": 3}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607134.6543639,
+      "timestamp_text": "1794607134.654364",
+      "payload": "01 0C 22 FF FF 02 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2179.0,
+        "boost_pa": null,
+        "trim": 2
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2179.0, \"boost_pa\": null, \"trim\": 2}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607134.45477,
+      "timestamp_text": "1794607134.454770",
+      "payload": "A3 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 270400,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 298.41,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 13.3,
+        "engine_hours": 100.00305555555556,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 270400, \"oil_temperature_k\": null, \"coolant_temperature_k\": 298.41, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 13.3, \"engine_hours\": 100.00305555555556, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607134.4547644,
+      "timestamp_text": "1794607134.454764",
+      "payload": "A2 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607134.454757,
+      "timestamp_text": "1794607134.454757",
+      "payload": "A1 74 8C 05 85 00 4B 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607134.4547307,
+      "timestamp_text": "1794607134.454731",
+      "payload": "A0 1A 01 90 0A FF FF 91",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607134.4544346,
+      "timestamp_text": "1794607134.454435",
+      "payload": "01 58 20 FF FF 02 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 2070.0,
+        "boost_pa": null,
+        "trim": 2
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 2070.0, \"boost_pa\": null, \"trim\": 2}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607134.254416,
+      "timestamp_text": "1794607134.254416",
+      "payload": "01 AC 1E FF FF 01 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1963.0,
+        "boost_pa": null,
+        "trim": 1
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1963.0, \"boost_pa\": null, \"trim\": 1}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607134.0544524,
+      "timestamp_text": "1794607134.054452",
+      "payload": "01 09 1D FF FF 01 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1858.25,
+        "boost_pa": null,
+        "trim": 1
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1858.25, \"boost_pa\": null, \"trim\": 1}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607133.8544474,
+      "timestamp_text": "1794607133.854447",
+      "payload": "01 6F 1B FF FF 00 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1755.75,
+        "boost_pa": null,
+        "trim": 0
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1755.75, \"boost_pa\": null, \"trim\": 0}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607133.654428,
+      "timestamp_text": "1794607133.654428",
+      "payload": "01 E1 19 FF FF 00 FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1656.25,
+        "boost_pa": null,
+        "trim": 0
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1656.25, \"boost_pa\": null, \"trim\": 0}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "1DF011ED",
+      "pgn": 126993,
+      "source": 237,
+      "timestamp": 1794607133.4545262,
+      "timestamp_text": "1794607133.454526",
+      "payload": "70 17 02 CF FF FF FF FF",
+      "decoded": {
+        "interval_ms": 6000,
+        "sequence": 2,
+        "controller1": 3,
+        "controller2": 3,
+        "equipment_status": 0
+      },
+      "decoded_text": "{\"interval_ms\": 6000, \"sequence\": 2, \"controller1\": 3, \"controller2\": 3, \"equipment_status\": 0}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607133.4545026,
+      "timestamp_text": "1794607133.454503",
+      "payload": "83 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 243200,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 297.95,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 8.700000000000001,
+        "engine_hours": 100.00277777777778,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 243200, \"oil_temperature_k\": null, \"coolant_temperature_k\": 297.95, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 8.700000000000001, \"engine_hours\": 100.00277777777778, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607133.4544973,
+      "timestamp_text": "1794607133.454497",
+      "payload": "82 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607133.4544911,
+      "timestamp_text": "1794607133.454491",
+      "payload": "81 74 8C 05 57 00 4A 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607133.4544833,
+      "timestamp_text": "1794607133.454483",
+      "payload": "80 1A 01 80 09 FF FF 63",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607133.4543843,
+      "timestamp_text": "1794607133.454384",
+      "payload": "01 60 18 FF FF FF FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1560.0,
+        "boost_pa": null,
+        "trim": -1
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1560.0, \"boost_pa\": null, \"trim\": -1}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607133.2544672,
+      "timestamp_text": "1794607133.254467",
+      "payload": "01 EE 16 FF FF FF FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1467.5,
+        "boost_pa": null,
+        "trim": -1
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1467.5, \"boost_pa\": null, \"trim\": -1}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607133.0544155,
+      "timestamp_text": "1794607133.054415",
+      "payload": "01 8B 15 FF FF FF FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1378.75,
+        "boost_pa": null,
+        "trim": -1
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1378.75, \"boost_pa\": null, \"trim\": -1}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607132.8545,
+      "timestamp_text": "1794607132.854500",
+      "payload": "01 3A 14 FF FF FE FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1294.5,
+        "boost_pa": null,
+        "trim": -2
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1294.5, \"boost_pa\": null, \"trim\": -2}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607132.6544795,
+      "timestamp_text": "1794607132.654480",
+      "payload": "01 FB 12 FF FF FE FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1214.75,
+        "boost_pa": null,
+        "trim": -2
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1214.75, \"boost_pa\": null, \"trim\": -2}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607132.4545536,
+      "timestamp_text": "1794607132.454554",
+      "payload": "63 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 220800,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 297.49,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 5.0,
+        "engine_hours": 100.0025,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 220800, \"oil_temperature_k\": null, \"coolant_temperature_k\": 297.49, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 5.0, \"engine_hours\": 100.0025, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607132.4545484,
+      "timestamp_text": "1794607132.454548",
+      "payload": "62 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607132.4545426,
+      "timestamp_text": "1794607132.454543",
+      "payload": "61 74 8C 05 32 00 49 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607132.4545348,
+      "timestamp_text": "1794607132.454535",
+      "payload": "60 1A 01 A0 08 FF FF 35",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607132.454431,
+      "timestamp_text": "1794607132.454431",
+      "payload": "01 D0 11 FF FF FE FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1140.0,
+        "boost_pa": null,
+        "trim": -2
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1140.0, \"boost_pa\": null, \"trim\": -2}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607132.2544188,
+      "timestamp_text": "1794607132.254419",
+      "payload": "01 BB 10 FF FF FD FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1070.75,
+        "boost_pa": null,
+        "trim": -3
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1070.75, \"boost_pa\": null, \"trim\": -3}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607132.0543513,
+      "timestamp_text": "1794607132.054351",
+      "payload": "01 BD 0F FF FF FD FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 1007.25,
+        "boost_pa": null,
+        "trim": -3
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 1007.25, \"boost_pa\": null, \"trim\": -3}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607131.8544884,
+      "timestamp_text": "1794607131.854488",
+      "payload": "01 D8 0E FF FF FD FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 950.0,
+        "boost_pa": null,
+        "trim": -3
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 950.0, \"boost_pa\": null, \"trim\": -3}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607131.654372,
+      "timestamp_text": "1794607131.654372",
+      "payload": "01 0C 0E FF FF FD FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 899.0,
+        "boost_pa": null,
+        "trim": -3
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 899.0, \"boost_pa\": null, \"trim\": -3}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607131.454523,
+      "timestamp_text": "1794607131.454523",
+      "payload": "43 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 205600,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 297.02,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 2.4000000000000004,
+        "engine_hours": 100.00222222222222,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 205600, \"oil_temperature_k\": null, \"coolant_temperature_k\": 297.02, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 2.4000000000000004, \"engine_hours\": 100.00222222222222, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607131.454518,
+      "timestamp_text": "1794607131.454518",
+      "payload": "42 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607131.4545121,
+      "timestamp_text": "1794607131.454512",
+      "payload": "41 74 8C 05 18 00 48 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607131.4545043,
+      "timestamp_text": "1794607131.454504",
+      "payload": "40 1A 01 08 08 FF FF 06",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607131.4544044,
+      "timestamp_text": "1794607131.454404",
+      "payload": "01 5C 0D FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 855.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 855.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607131.2544758,
+      "timestamp_text": "1794607131.254476",
+      "payload": "01 C9 0C FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 818.25,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 818.25, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607131.0543852,
+      "timestamp_text": "1794607131.054385",
+      "payload": "01 54 0C FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 789.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 789.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607130.8544402,
+      "timestamp_text": "1794607130.854440",
+      "payload": "01 FE 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 767.5,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 767.5, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607130.654428,
+      "timestamp_text": "1794607130.654428",
+      "payload": "01 CA 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 754.5,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 754.5, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607130.4545,
+      "timestamp_text": "1794607130.454500",
+      "payload": "23 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 200000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 296.55,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 1.5,
+        "engine_hours": 100.00194444444445,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 200000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 296.55, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 1.5, \"engine_hours\": 100.00194444444445, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607130.4544947,
+      "timestamp_text": "1794607130.454495",
+      "payload": "22 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607130.4544895,
+      "timestamp_text": "1794607130.454489",
+      "payload": "21 73 8C 05 0F 00 47 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607130.4544816,
+      "timestamp_text": "1794607130.454482",
+      "payload": "20 1A 01 D0 07 FF FF D7",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607130.4543817,
+      "timestamp_text": "1794607130.454382",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607130.2545106,
+      "timestamp_text": "1794607130.254511",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607130.0543735,
+      "timestamp_text": "1794607130.054374",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607129.8544,
+      "timestamp_text": "1794607129.854400",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607129.6544094,
+      "timestamp_text": "1794607129.654409",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607129.4545236,
+      "timestamp_text": "1794607129.454524",
+      "payload": "03 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 200000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 296.08,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 1.5,
+        "engine_hours": 100.00166666666667,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 200000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 296.08, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 1.5, \"engine_hours\": 100.00166666666667, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607129.4545183,
+      "timestamp_text": "1794607129.454518",
+      "payload": "02 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607129.4545128,
+      "timestamp_text": "1794607129.454513",
+      "payload": "01 73 8C 05 0F 00 46 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607129.4545047,
+      "timestamp_text": "1794607129.454505",
+      "payload": "00 1A 01 D0 07 FF FF A8",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607129.4543917,
+      "timestamp_text": "1794607129.454392",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607129.2544641,
+      "timestamp_text": "1794607129.254464",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607129.054366,
+      "timestamp_text": "1794607129.054366",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607128.854345,
+      "timestamp_text": "1794607128.854345",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607128.6543803,
+      "timestamp_text": "1794607128.654380",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607128.4545207,
+      "timestamp_text": "1794607128.454521",
+      "payload": "E3 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 200000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 295.6,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 1.5,
+        "engine_hours": 100.00138888888888,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 200000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 295.6, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 1.5, \"engine_hours\": 100.00138888888888, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607128.4545157,
+      "timestamp_text": "1794607128.454516",
+      "payload": "E2 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607128.4545102,
+      "timestamp_text": "1794607128.454510",
+      "payload": "E1 73 8C 05 0F 00 45 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607128.454502,
+      "timestamp_text": "1794607128.454502",
+      "payload": "E0 1A 01 D0 07 FF FF 78",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607128.4543834,
+      "timestamp_text": "1794607128.454383",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607128.25439,
+      "timestamp_text": "1794607128.254390",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607128.0543602,
+      "timestamp_text": "1794607128.054360",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607127.8544183,
+      "timestamp_text": "1794607127.854418",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607127.6543496,
+      "timestamp_text": "1794607127.654350",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607127.4545448,
+      "timestamp_text": "1794607127.454545",
+      "payload": "C3 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 200000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 295.12,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 1.5,
+        "engine_hours": 100.00111111111111,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 200000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 295.12, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 1.5, \"engine_hours\": 100.00111111111111, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607127.454539,
+      "timestamp_text": "1794607127.454539",
+      "payload": "C2 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607127.454533,
+      "timestamp_text": "1794607127.454533",
+      "payload": "C1 73 8C 05 0F 00 44 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607127.4545264,
+      "timestamp_text": "1794607127.454526",
+      "payload": "C0 1A 01 D0 07 FF FF 48",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607127.4544606,
+      "timestamp_text": "1794607127.454461",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "1DF011ED",
+      "pgn": 126993,
+      "source": 237,
+      "timestamp": 1794607127.4543855,
+      "timestamp_text": "1794607127.454386",
+      "payload": "70 17 01 CF FF FF FF FF",
+      "decoded": {
+        "interval_ms": 6000,
+        "sequence": 1,
+        "controller1": 3,
+        "controller2": 3,
+        "equipment_status": 0
+      },
+      "decoded_text": "{\"interval_ms\": 6000, \"sequence\": 1, \"controller1\": 3, \"controller2\": 3, \"equipment_status\": 0}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607127.2544038,
+      "timestamp_text": "1794607127.254404",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607127.0543454,
+      "timestamp_text": "1794607127.054345",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607126.8543227,
+      "timestamp_text": "1794607126.854323",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607126.6543963,
+      "timestamp_text": "1794607126.654396",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607126.454543,
+      "timestamp_text": "1794607126.454543",
+      "payload": "A3 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 200000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 294.63,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 1.5,
+        "engine_hours": 100.00083333333333,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 200000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 294.63, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 1.5, \"engine_hours\": 100.00083333333333, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607126.454538,
+      "timestamp_text": "1794607126.454538",
+      "payload": "A2 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607126.4545324,
+      "timestamp_text": "1794607126.454532",
+      "payload": "A1 73 8C 05 0F 00 43 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607126.4545243,
+      "timestamp_text": "1794607126.454524",
+      "payload": "A0 1A 01 D0 07 FF FF 17",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607126.4544065,
+      "timestamp_text": "1794607126.454406",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607126.2544105,
+      "timestamp_text": "1794607126.254411",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607126.0543885,
+      "timestamp_text": "1794607126.054389",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607125.854314,
+      "timestamp_text": "1794607125.854314",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607125.654415,
+      "timestamp_text": "1794607125.654415",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607125.4545462,
+      "timestamp_text": "1794607125.454546",
+      "payload": "83 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 200000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 294.14,
+        "alternator_voltage_v": 14.200000000000001,
+        "fuel_rate_lph": 1.5,
+        "engine_hours": 100.00055555555555,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 200000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 294.14, \"alternator_voltage_v\": 14.200000000000001, \"fuel_rate_lph\": 1.5, \"engine_hours\": 100.00055555555555, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607125.4545412,
+      "timestamp_text": "1794607125.454541",
+      "payload": "82 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607125.4545355,
+      "timestamp_text": "1794607125.454535",
+      "payload": "81 72 8C 05 0F 00 42 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607125.454528,
+      "timestamp_text": "1794607125.454528",
+      "payload": "80 1A 01 D0 07 FF FF E6",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607125.454421,
+      "timestamp_text": "1794607125.454421",
+      "payload": "01 B8 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 750.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 750.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607125.2544339,
+      "timestamp_text": "1794607125.254434",
+      "payload": "01 64 0B FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 729.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 729.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607125.0543509,
+      "timestamp_text": "1794607125.054351",
+      "payload": "01 80 0A FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 672.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 672.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607124.8543289,
+      "timestamp_text": "1794607124.854329",
+      "payload": "01 30 09 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 588.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 588.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607124.654388,
+      "timestamp_text": "1794607124.654388",
+      "payload": "01 98 07 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 486.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 486.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607124.454581,
+      "timestamp_text": "1794607124.454581",
+      "payload": "63 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 100000,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 293.65000000000003,
+        "alternator_voltage_v": 12.6,
+        "fuel_rate_lph": 0.8,
+        "engine_hours": 100.00027777777778,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 100000, \"oil_temperature_k\": null, \"coolant_temperature_k\": 293.65000000000003, \"alternator_voltage_v\": 12.6, \"fuel_rate_lph\": 0.8, \"engine_hours\": 100.00027777777778, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607124.454575,
+      "timestamp_text": "1794607124.454575",
+      "payload": "62 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607124.4545693,
+      "timestamp_text": "1794607124.454569",
+      "payload": "61 72 EC 04 08 00 41 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607124.4545553,
+      "timestamp_text": "1794607124.454555",
+      "payload": "60 1A 01 E8 03 FF FF B5",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607124.454413,
+      "timestamp_text": "1794607124.454413",
+      "payload": "01 DC 05 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 375.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 375.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607124.2544022,
+      "timestamp_text": "1794607124.254402",
+      "payload": "01 20 04 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 264.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 264.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607124.0543506,
+      "timestamp_text": "1794607124.054351",
+      "payload": "01 88 02 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 162.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 162.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607123.8543708,
+      "timestamp_text": "1794607123.854371",
+      "payload": "01 38 01 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 78.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 78.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607123.6544018,
+      "timestamp_text": "1794607123.654402",
+      "payload": "01 54 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 21.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 21.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607123.4545522,
+      "timestamp_text": "1794607123.454552",
+      "payload": "43 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 0,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 293.15000000000003,
+        "alternator_voltage_v": 12.6,
+        "fuel_rate_lph": 0.0,
+        "engine_hours": 100.0,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 0, \"oil_temperature_k\": null, \"coolant_temperature_k\": 293.15000000000003, \"alternator_voltage_v\": 12.6, \"fuel_rate_lph\": 0.0, \"engine_hours\": 100.0, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607123.454547,
+      "timestamp_text": "1794607123.454547",
+      "payload": "42 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607123.4545412,
+      "timestamp_text": "1794607123.454541",
+      "payload": "41 72 EC 04 00 00 40 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607123.454533,
+      "timestamp_text": "1794607123.454533",
+      "payload": "40 1A 01 00 00 FF FF 83",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607123.4544196,
+      "timestamp_text": "1794607123.454420",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607123.254339,
+      "timestamp_text": "1794607123.254339",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607123.054343,
+      "timestamp_text": "1794607123.054343",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607122.8543694,
+      "timestamp_text": "1794607122.854369",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607122.6543818,
+      "timestamp_text": "1794607122.654382",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607122.4544792,
+      "timestamp_text": "1794607122.454479",
+      "payload": "23 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 0,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 293.15000000000003,
+        "alternator_voltage_v": 12.6,
+        "fuel_rate_lph": 0.0,
+        "engine_hours": 100.0,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 0, \"oil_temperature_k\": null, \"coolant_temperature_k\": 293.15000000000003, \"alternator_voltage_v\": 12.6, \"fuel_rate_lph\": 0.0, \"engine_hours\": 100.0, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607122.4544733,
+      "timestamp_text": "1794607122.454473",
+      "payload": "22 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607122.454467,
+      "timestamp_text": "1794607122.454467",
+      "payload": "21 72 EC 04 00 00 40 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607122.4544582,
+      "timestamp_text": "1794607122.454458",
+      "payload": "20 1A 01 00 00 FF FF 83",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607122.4543471,
+      "timestamp_text": "1794607122.454347",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607122.2543738,
+      "timestamp_text": "1794607122.254374",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607122.0544255,
+      "timestamp_text": "1794607122.054425",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607121.8543143,
+      "timestamp_text": "1794607121.854314",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607121.6544025,
+      "timestamp_text": "1794607121.654402",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607121.4546313,
+      "timestamp_text": "1794607121.454631",
+      "payload": "03 00 00 00 00 7F 7F FF",
+      "decoded": {
+        "instance": 1,
+        "oil_pressure_pa": 0,
+        "oil_temperature_k": null,
+        "coolant_temperature_k": 293.15000000000003,
+        "alternator_voltage_v": 12.6,
+        "fuel_rate_lph": 0.0,
+        "engine_hours": 100.0,
+        "coolant_pressure_pa": null,
+        "fuel_pressure_pa": null,
+        "status1": 0,
+        "status2": 0,
+        "engine_load_pct": null,
+        "engine_torque_pct": null
+      },
+      "decoded_text": "{\"instance\": 1, \"oil_pressure_pa\": 0, \"oil_temperature_k\": null, \"coolant_temperature_k\": 293.15000000000003, \"alternator_voltage_v\": 12.6, \"fuel_rate_lph\": 0.0, \"engine_hours\": 100.0, \"coolant_pressure_pa\": null, \"fuel_pressure_pa\": null, \"status1\": 0, \"status2\": 0, \"engine_load_pct\": null, \"engine_torque_pct\": null}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607121.4546165,
+      "timestamp_text": "1794607121.454617",
+      "payload": "02 05 00 FF FF FF FF FF",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607121.454579,
+      "timestamp_text": "1794607121.454579",
+      "payload": "01 72 EC 04 00 00 40 7E",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F201ED",
+      "pgn": 127489,
+      "source": 237,
+      "timestamp": 1794607121.4545488,
+      "timestamp_text": "1794607121.454549",
+      "payload": "00 1A 01 00 00 FF FF 83",
+      "decoded": null,
+      "decoded_text": "",
+      "error": "",
+      "kind": "fragment / ignored"
+    },
+    {
+      "id": "09F200ED",
+      "pgn": 127488,
+      "source": 237,
+      "timestamp": 1794607121.4544494,
+      "timestamp_text": "1794607121.454449",
+      "payload": "01 00 00 FF FF FC FF FF",
+      "decoded": {
+        "instance": 1,
+        "rpm": 0.0,
+        "boost_pa": null,
+        "trim": -4
+      },
+      "decoded_text": "{\"instance\": 1, \"rpm\": 0.0, \"boost_pa\": null, \"trim\": -4}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "1DF011ED",
+      "pgn": 126993,
+      "source": 237,
+      "timestamp": 1794607121.4542453,
+      "timestamp_text": "1794607121.454245",
+      "payload": "70 17 00 CF FF FF FF FF",
+      "decoded": {
+        "interval_ms": 6000,
+        "sequence": 0,
+        "controller1": 3,
+        "controller2": 3,
+        "equipment_status": 0
+      },
+      "decoded_text": "{\"interval_ms\": 6000, \"sequence\": 0, \"controller1\": 3, \"controller2\": 3, \"equipment_status\": 0}",
+      "error": "",
+      "kind": "decoded"
+    },
+    {
+      "id": "18EEFFED",
+      "pgn": 60928,
+      "source": 237,
+      "timestamp": 1794607121.2038686,
+      "timestamp_text": "1794607121.203869",
+      "payload": "ED 00 C0 FF 00 8C 64 C0",
+      "decoded": {
+        "unique_number": 237,
+        "manufacturer_code": 2046,
+        "device_instance": 0,
+        "device_function": 140,
+        "device_class": 50,
+        "system_instance": 0,
+        "industry_group": 4,
+        "arbitrary_address_capable": 1
+      },
+      "decoded_text": "{\"unique_number\": 237, \"manufacturer_code\": 2046, \"device_instance\": 0, \"device_function\": 140, \"device_class\": 50, \"system_instance\": 0, \"industry_group\": 4, \"arbitrary_address_capable\": 1}",
+      "error": "",
+      "kind": "decoded"
+    }
+  ]
+}
