@@ -63,7 +63,12 @@ class DashboardBackend(QObject):
     def stats(self):
         errors = self._stats['fast_errors']
         rate = self._stats.get('rate', len(self._rate_times) / min(1, max(.1, self.clock() - self._started)))
-        return {**self._stats, 'rate': rate if self._connection == 'connected' else 0,
+        return {**self._stats, 'transport': self.config.transport, 'host': self.config.host,
+                'port': self.config.port, 'channel': self.config.channel,
+                'reconnections': self._stats.get('reconnections', 0),
+                'transport_errors': self._stats.get('transport_errors', 0),
+                'parsing_errors': self._stats.get('parsing_errors', 0),
+                'last_timestamp': self._stats.get('last_timestamp'), 'rate': rate if self._connection == 'connected' else 0,
                 'fast_error_count': sum(errors.values()), 'engine_count': len(self.store.engines)}
 
     @Property(bool, notify=diagnosticsChanged)
@@ -93,7 +98,7 @@ class DashboardBackend(QObject):
         self._stats = {'received': 0, 'decoded_count': 0, 'malformed': 0, 'dropped': 0, 'fast_errors': {}}
         self._rate_times.clear()
         self._started = self.clock()
-        self.worker = CanReceiver(self.config.channel, self)
+        self.worker = CanReceiver(self.config, self)
         self.worker.batchReceived.connect(self.on_batch)
         self.worker.connectionChanged.connect(self.on_connection)
         self.worker.start()
@@ -114,6 +119,9 @@ class DashboardBackend(QObject):
             self._stats['decoded_count'] = decoded_count
             if 'rate' in batch:
                 self._stats['rate'] = batch['rate']
+            for name in ('reconnections', 'transport_errors', 'parsing_errors', 'last_timestamp'):
+                if name in batch:
+                    self._stats[name] = batch[name]
             for event in batch['frames']:
                 message = event.message
                 info = None
@@ -133,7 +141,9 @@ class DashboardBackend(QObject):
                     'timestamp': message.timestamp, 'timestamp_text': f'{message.timestamp:.6f}',
                     'payload': bytes(message.data).hex(' ').upper(),
                     'decoded': decoded, 'decoded_text': json.dumps(decoded, ensure_ascii=True) if decoded is not None else '',
-                    'error': event.error, 'kind': kind})
+                    'error': event.error, 'kind': kind, 'transport': event.transport,
+                    'channel': message.channel, 'gateway_host': self.config.host,
+                    'gateway_port': self.config.port if event.transport == 'socketcand' else None})
             self._choose_initial()
             if not self._diagnostics_paused:
                 self.diagnosticsChanged.emit()

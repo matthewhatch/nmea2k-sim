@@ -1,12 +1,14 @@
 # M5 — native NMEA 2000 engine instruments
 
 A PySide6 / Qt Quick desktop application. It is an independent, receive-only
-SocketCAN client using the same decoders as the console consumer. It imports no
-engine model or simulator state and uses no web, messaging or network service.
+SocketCAN or remote socketcand client using the same decoders as the console
+consumer. It imports no engine model or simulator state. M6 adds native CAN
+transport over TCP; see the remote transport section below.
 
 ## Install and run
 
-Linux, Python 3.11+, SocketCAN and a working X11 or Wayland desktop are required.
+Linux, Python 3.11+ and a working X11 or Wayland desktop are required. Local
+reception requires SocketCAN; remote reception requires a socketcand endpoint.
 Install the optional GUI extra; base simulator/consumer installations do not
 require Qt:
 
@@ -189,3 +191,13 @@ screenshot/snapshot show source 237, engine instance 1, 2961 RPM and 25.71 C;
 `m5-dashboard-live.validation.json` records Qt version, method and artifact hashes.
 The screenshot was captured from actual CAN-fed instruments, not seeded UI data.
 M4 physical/Pi/Garmin gates remain open.
+
+## M6 remote transport
+
+The worker now uses a Qt-independent receive transport: either an adapter around
+the existing local SocketCAN opener or the receive-only socketcand RAW TCP client.
+Both return python-can Messages to the same Decoder before existing telemetry and
+bounded UI batching. Connection diagnostics include endpoint, retries, transport
+errors, protocol errors and last gateway frame timestamp, independently of stale
+telemetry. See [Ethernet transport](ETHERNET.md) for the protocol spike, architecture,
+gateway setup, limitations, security and two-machine reproduction commands.

@@ -16,10 +16,16 @@ class DashboardConfig:
     quit_after: float | None = None
     snapshot: Path | None = None
     screenshot: Path | None = None
+    transport: str = 'socketcan'
+    host: str = ''
+    port: int = 29536
 
 
 def parse_dashboard_config(argv=None) -> DashboardConfig:
     parser = argparse.ArgumentParser(description='Native receive-only NMEA 2000 engine instruments')
+    parser.add_argument('--transport', choices=('socketcan', 'socketcand'), default=os.getenv('NMEA_TRANSPORT', 'socketcan'))
+    parser.add_argument('--host', default=os.getenv('NMEA_GATEWAY_HOST', ''))
+    parser.add_argument('--port', type=int, default=os.getenv('NMEA_GATEWAY_PORT', '29536'))
     parser.add_argument('--channel', default=os.getenv('NMEA_CAN_CHANNEL', 'vcan0'))
     parser.add_argument('--stale-after', type=float, default=3.0, help='per-PGN freshness timeout in seconds')
     parser.add_argument('--source-address', type=int, help='initial engine selection, not a CAN transmit address')
@@ -32,6 +38,12 @@ def parse_dashboard_config(argv=None) -> DashboardConfig:
         validate_channel(args.channel)
     except ValueError as exc:
         parser.error(str(exc))
+    if args.transport not in ('socketcan', 'socketcand'):
+        parser.error('invalid transport')
+    if not 1 <= args.port <= 65535:
+        parser.error('port must be 1–65535')
+    if args.transport == 'socketcand' and (not args.host.strip() or len(args.channel) > 16):
+        parser.error('socketcand requires --host and a channel of at most 16 characters')
     for name in ('stale_after', 'quit_after'):
         value = getattr(args, name)
         if value is not None and (not math.isfinite(value) or value <= 0):

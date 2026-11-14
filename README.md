@@ -285,3 +285,17 @@ Native X11/xcb rendering was verified in Xvfb with a process-local copy of the
 missing cursor library. Install libxcb-cursor0 normally for desktop launch on
 this host; see the dashboard guide for details. Physical Pi/CAN/Garmin acceptance
 remains pending.
+
+### Remote dashboard (M6)
+
+The native dashboard can receive socketcand RAW CAN traffic over TCP, using the
+same NMEA 2000 decoder as local SocketCAN:
+
+```sh
+env/bin/python -m nmea_sim.dashboard --transport socketcand --host 192.168.50.10 --port 29536 --channel vcan0
+```
+
+Local reception still defaults to `vcan0`; `--channel can0` supports an already
+configured physical CAN interface. See [Ethernet transport](docs/ETHERNET.md) for
+the verified socketcand handshake, gateway installation, security limitations,
+configuration, diagnostics, tests, and exact two-machine acceptance commands.

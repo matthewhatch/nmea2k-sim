@@ -114,14 +114,15 @@ def test_worker_failure_does_not_transmit(app, monkeypatch):
     def fail(config, *, transmit=False):
         assert transmit is False
         raise ValueError('interface absent')
-    monkeypatch.setattr('nmea_sim.dashboard_receiver.open_bus', fail)
+    monkeypatch.setattr('nmea_sim.dashboard_receiver.open_receive_transport', fail)
     receiver = CanReceiver('absent0')
     errors = []
     receiver.connectionChanged.connect(lambda *args: errors.append(args))
     receiver.start()
     assert receiver.wait(2000)
     app.processEvents()
-    assert errors == [('error', 'interface absent')]
+    assert errors[-1] == ('error', 'interface absent')
+    assert errors[0][0] == 'connecting'
 
 
 def test_diagnostic_pause_keeps_receiving_engine_updates(app):
@@ -147,15 +148,13 @@ def test_worker_rejects_malformed_and_tracks_reassembly_errors(app, monkeypatch)
     from PySide6.QtTest import QSignalSpy
     frames = deque([packet(127488, bytes(7)), packet(127489, b'\x01' + bytes(7))])
     class Bus:
-        def __enter__(self):
-            return self
-        def __exit__(self, *args):
+        def close(self):
             pass
         def recv(self, timeout):
             if frames:
                 return frames.popleft()
             time.sleep(.01)
-    monkeypatch.setattr('nmea_sim.dashboard_receiver.open_bus', lambda *args, **kwargs: Bus())
+    monkeypatch.setattr('nmea_sim.dashboard_receiver.open_receive_transport', lambda *args, **kwargs: Bus())
     receiver = CanReceiver('vcan0')
     spy = QSignalSpy(receiver.batchReceived)
     receiver.start()
@@ -171,3 +170,50 @@ def test_worker_rejects_malformed_and_tracks_reassembly_errors(app, monkeypatch)
     finally:
         receiver.stop()
         assert receiver.wait(2000)
+
+
+def test_worker_bounds_ui_backlog_and_shutdown(app, monkeypatch):
+    import time
+    from PySide6.QtTest import QSignalSpy
+    closed = []
+    class Flood:
+        def recv(self, timeout):
+            return packet(127488, encode_rapid(RapidUpdate(0, 750, None, 0)))
+        def close(self):
+            closed.append(True)
+    monkeypatch.setattr('nmea_sim.dashboard_receiver.open_receive_transport', lambda config: Flood())
+    receiver = CanReceiver('vcan0')
+    spy = QSignalSpy(receiver.batchReceived)
+    receiver.start()
+    try:
+        time.sleep(.25)  # main thread deliberately does not acknowledge batches
+        app.processEvents()
+        assert spy.count() == 1
+        assert len(spy.at(0)[0]['frames']) <= 256
+        assert spy.at(0)[0]['dropped'] > 0
+        receiver.acknowledge()
+        time.sleep(.1)
+        app.processEvents()
+        assert spy.count() == 2
+        assert len(spy.at(1)[0]['frames']) <= 256
+    finally:
+        receiver.stop()
+        assert receiver.wait(1500)
+    assert closed == [True]
+
+
+def test_stop_during_remote_retry(app, monkeypatch):
+    from PySide6.QtTest import QSignalSpy
+    def fail(config):
+        raise ConnectionError('offline')
+    monkeypatch.setattr('nmea_sim.dashboard_receiver.open_receive_transport', fail)
+    receiver = CanReceiver(DashboardConfig(transport='socketcand', host='localhost'))
+    spy = QSignalSpy(receiver.connectionChanged)
+    receiver.start()
+    QTest.qWait(100)
+    receiver.stop()
+    assert receiver.wait(1000)
+    app.processEvents()
+    states = [spy.at(i)[0] for i in range(spy.count())]
+    assert states[:3] == ['connecting', 'error', 'reconnecting']
+    assert states[-1] == 'disconnected'

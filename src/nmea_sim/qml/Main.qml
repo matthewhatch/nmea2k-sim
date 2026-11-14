@@ -23,7 +23,7 @@ ApplicationWindow {
     property bool diagnosticsOpen: false
     readonly property color teal: "#55e3cc"
     readonly property string healthLabel: dashboard.connection === "error" ? "CAN INTERFACE ERROR" :
-        dashboard.connection === "connecting" ? "CONNECTING" :
+        dashboard.connection !== "connected" ? dashboard.connection.toUpperCase() :
         data.status === "fresh" ? "LIVE TELEMETRY" : data.status === "partial" ? "PARTIAL TELEMETRY" :
         data.status === "stale" ? "COMMUNICATION LOST" : "WAITING FOR ENGINE DATA"
     readonly property color healthColor: dashboard.connection === "error" || data.status === "stale" ? "#ff8c83" :
@@ -37,7 +37,7 @@ ApplicationWindow {
             ColumnLayout {
                 spacing: 4
                 Text { text: "HELM  /  ENGINE"; color: "#ecf8ff"; font.pixelSize: 24; font.weight: Font.DemiBold; font.letterSpacing: 1 }
-                Text { text: "NMEA 2000 INSTRUMENTS    ·    SOCKETCAN RECEIVE ONLY"; color: "#6d91a6"; font.pixelSize: 10; font.letterSpacing: 1.2 }
+                Text { text: "NMEA 2000 INSTRUMENTS    ·    RECEIVE ONLY"; color: "#6d91a6"; font.pixelSize: 10; font.letterSpacing: 1.2 }
             }
             Item { Layout.fillWidth: true }
             ComboBox {
@@ -66,7 +66,7 @@ ApplicationWindow {
             }
         }
         Text {
-            Layout.fillWidth: true; visible: dashboard.connection === "error" || dashboard.connection === "connecting"
+            Layout.fillWidth: true; visible: dashboard.connection !== "connected"
             text: dashboard.connectionDetail; wrapMode: Text.Wrap; color: "#ffb3a9"; font.pixelSize: 12
         }
         StackLayout {
@@ -130,7 +130,7 @@ ApplicationWindow {
                     Button { text: dashboard.diagnosticsPaused ? "Resume view" : "Pause view"; onClicked: dashboard.toggleDiagnosticsPause() }
                     Item { Layout.fillWidth: true }
                 }
-                Text { Layout.fillWidth: true; text: "Frames " + window.counters.received + "   Messages " + window.counters.decoded_count + "   Malformed " + window.counters.malformed + "   Reassembly " + window.counters.fast_error_count; color: "#acc6d4"; font.pixelSize: 11; wrapMode: Text.Wrap }
+                Text { Layout.fillWidth: true; text: window.counters.transport + " / " + dashboard.channel + (window.counters.transport === "socketcand" ? " @ " + window.counters.host + ":" + window.counters.port : "") + " · " + dashboard.connection + " · Retries " + window.counters.reconnections + " · Transport errors " + window.counters.transport_errors + " · Parse errors " + window.counters.parsing_errors + " · Last frame " + (window.counters.last_timestamp || "none") + "\nFrames " + window.counters.received + "   Messages " + window.counters.decoded_count + "   Malformed " + window.counters.malformed + "   Reassembly " + window.counters.fast_error_count; color: "#acc6d4"; font.pixelSize: 11; wrapMode: Text.Wrap }
                 Text { id: filterError; visible: false; text: "Enter decimal PGN 0–262143 and source 0–255."; color: "#ffb3a9"; font.pixelSize: 12 }
                 Text { Layout.fillWidth: true; text: "Fast-packet errors: " + JSON.stringify(window.counters.fast_errors || {}) + "   ·   UI frames dropped: " + window.counters.dropped; color: "#7298af"; font.pixelSize: 10; wrapMode: Text.Wrap }
                 Rectangle {
