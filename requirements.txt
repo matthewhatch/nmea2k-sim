@@ -1,0 +1,12 @@
+iniconfig==2.3.1
+-e git+ssh://git@github.com/matthewhatch/nmea2k-sim.git@85e3b50602de96e2fab91bb725d1d7fb73f95163#egg=nmea_engine_sim
+packaging==26.3
+pluggy==1.7.0
+PySide6==6.8.3
+PySide6_Addons==6.8.3
+PySide6_Essentials==6.8.3
+pytest==8.3.5
+python-can==4.6.1
+shiboken6==6.8.3
+typing_extensions==4.16.0
+wrapt==1.17.3
