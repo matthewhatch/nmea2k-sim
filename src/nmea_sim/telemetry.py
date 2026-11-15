@@ -85,6 +85,11 @@ class TelemetryStore:
                     if dynamic and dynamic.oil_pressure_pa is not None else None,
                 'fuel_rate_lph': dynamic.fuel_rate_lph if dynamic else None,
                 'engine_hours': dynamic.engine_hours if dynamic else None,
+                'oil_temperature_c': dynamic.oil_temperature_k - 273.15
+                    if dynamic and dynamic.oil_temperature_k is not None else None,
+                'fuel_pressure_bar': dynamic.fuel_pressure_pa / 100000
+                    if dynamic and dynamic.fuel_pressure_pa is not None else None,
+                'engine_load_pct': dynamic.engine_load_pct if dynamic else None,
                 'high_temperature': None if flags is None else bool(flags & Status1.OVER_TEMPERATURE),
                 'low_oil_pressure': None if flags is None else bool(flags & Status1.LOW_OIL_PRESSURE),
                 'low_voltage': None if flags is None else bool(flags & Status1.LOW_SYSTEM_VOLTAGE),

@@ -88,12 +88,15 @@ ApplicationWindow {
                     }
                 }
                 GridLayout {
-                    Layout.fillWidth: true; columns: 5; columnSpacing: 12
+                    Layout.fillWidth: true; columns: 4; columnSpacing: 12; rowSpacing: 12
                     MetricTile { Layout.fillWidth: true; title: "ALTERNATOR"; units: "V"; reading: window.data.voltage_v }
                     MetricTile { Layout.fillWidth: true; title: "OIL PRESSURE"; units: "bar"; reading: window.data.oil_pressure_bar; decimals: 2 }
                     MetricTile { Layout.fillWidth: true; title: "FUEL RATE"; units: "L/h"; reading: window.data.fuel_rate_lph }
                     MetricTile { Layout.fillWidth: true; title: "ENGINE HOURS"; units: "h"; reading: window.data.engine_hours; decimals: 2 }
                     MetricTile { Layout.fillWidth: true; title: "TRIM"; units: "%"; reading: window.data.trim; decimals: 0 }
+                    MetricTile { objectName: "oilTemperatureTile"; Layout.fillWidth: true; title: "OIL TEMPERATURE"; units: "°C"; reading: window.data.oil_temperature_c }
+                    MetricTile { objectName: "fuelPressureTile"; Layout.fillWidth: true; title: "FUEL PRESSURE"; units: "bar"; reading: window.data.fuel_pressure_bar; decimals: 2 }
+                    MetricTile { objectName: "engineLoadTile"; Layout.fillWidth: true; title: "ENGINE LOAD"; units: "%"; reading: window.data.engine_load_pct; decimals: 0 }
                 }
                 Rectangle {
                     Layout.fillWidth: true; implicitHeight: 72; color: "#10232e"; border.color: "#243d4b"; radius: 12

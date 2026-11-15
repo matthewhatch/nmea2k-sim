@@ -58,11 +58,16 @@ def test_real_gateway_two_dashboards_restart_and_local(vcan):
         wait(lambda: all(b.connection == 'connected' for b in backends))
         assert first.poll() is None
         simulator = subprocess.Popen([sys.executable, '-m', 'nmea_sim.simulator', '--channel', 'vcan0',
-                                      '--source-address', '233', '--unique-number', '233'],
+                                      '--source-address', '233', '--unique-number', '233',
+                                      '--fault', 'low-fuel-pressure', '--fault-start', '4', '--fault-duration', '2'],
                                      stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
         def both_pgns(backend):
             return {127488, 127489} <= {r['pgn'] for r in backend.diagnostics if r['source'] == 233 and r['decoded']}
         wait(lambda: all(both_pgns(b) for b in backends))
+        for backend in backends:
+            assert backend.view['oil_temperature_c'] is not None
+            assert backend.view['fuel_pressure_bar'] is not None
+            assert backend.view['engine_load_pct'] is not None
         # Compare each client's decoded records against an independent local decoder.
         decoder = Decoder()
         expected = {}
@@ -81,6 +86,10 @@ def test_real_gateway_two_dashboards_restart_and_local(vcan):
                     assert row['decoded'] == expected[key]
                     matching += 1
             assert matching >= 2
+        wait(lambda: all('LOW_FUEL_PRESSURE' in b.view['warnings'] for b in backends))
+        assert all(b.view['fuel_pressure_bar'] == .6 for b in backends)
+        wait(lambda: all(b.view['warning_known'] and not b.view['warnings'] and
+                         b.view['fuel_pressure_bar'] == 3 for b in backends))
         kill_gateway(first)
         wait(lambda: all(b.connection == 'reconnecting' for b in backends[:2]))
         wait(lambda: all(b.view['rpm'] is None for b in backends[:2]))

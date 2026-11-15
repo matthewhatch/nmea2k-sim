@@ -35,3 +35,18 @@ def test_off_sensors_and_running_time():
     assert state_at(51).running_seconds == 44
     assert state_at(53).running_seconds == 45
     assert sample_dynamic(47).engine_hours == sample_dynamic(51).engine_hours
+
+
+def test_additional_nominal_sensors_and_thermal_continuity():
+    assert sample_dynamic(0).oil_temperature_k == 293.15
+    assert sample_dynamic(0).fuel_pressure_pa == 0
+    assert sample_dynamic(0).engine_load_pct == 0
+    assert sample_dynamic(3).fuel_pressure_pa == 150000
+    assert sample_dynamic(5).engine_load_pct == 10
+    assert sample_dynamic(25).engine_load_pct == 85
+    assert sample_dynamic(25).fuel_pressure_pa == 300000
+    assert sample_dynamic(46).oil_temperature_k > sample_dynamic(50).oil_temperature_k > 293.15
+    for boundary in (2, 46, 50, 52, 96, 100):
+        assert abs(sample_dynamic(boundary - .001).oil_temperature_k -
+                   sample_dynamic(boundary + .001).oil_temperature_k) < .002
+    assert sample_dynamic(10000).oil_temperature_k < 373.15

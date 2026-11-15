@@ -1,0 +1,61 @@
+{
+  "scenario": "low-fuel-pressure",
+  "start": 4,
+  "duration": 2,
+  "samples": [
+    {
+      "oil_temperature_k": 293.1,
+      "fuel_pressure_pa": 0,
+      "status1": 0,
+      "engine_load_pct": 0
+    },
+    {
+      "oil_temperature_k": 293.1,
+      "fuel_pressure_pa": 0,
+      "status1": 0,
+      "engine_load_pct": 0
+    },
+    {
+      "oil_temperature_k": 293.2,
+      "fuel_pressure_pa": 0,
+      "status1": 0,
+      "engine_load_pct": 0
+    },
+    {
+      "oil_temperature_k": 293.6,
+      "fuel_pressure_pa": 150000,
+      "status1": 0,
+      "engine_load_pct": 5
+    },
+    {
+      "oil_temperature_k": 294.0,
+      "fuel_pressure_pa": 60000,
+      "status1": 16,
+      "engine_load_pct": 10
+    },
+    {
+      "oil_temperature_k": 294.5,
+      "fuel_pressure_pa": 60000,
+      "status1": 16,
+      "engine_load_pct": 10
+    },
+    {
+      "oil_temperature_k": 294.90000000000003,
+      "fuel_pressure_pa": 300000,
+      "status1": 0,
+      "engine_load_pct": 10
+    },
+    {
+      "oil_temperature_k": 295.3,
+      "fuel_pressure_pa": 300000,
+      "status1": 0,
+      "engine_load_pct": 10
+    },
+    {
+      "oil_temperature_k": 295.8,
+      "fuel_pressure_pa": 300000,
+      "status1": 0,
+      "engine_load_pct": 10
+    }
+  ]
+}

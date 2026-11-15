@@ -1,5 +1,12 @@
 # Captured vcan0 engine traffic
 
+M7 adds `m7-fault.log` and `m7-fault.json`: actual SocketCAN traffic from a
+bounded simulator process, with nine PGN 127489 samples. Low fuel pressure is
+injected at model seconds 4–6 and recovers to 3 bar. Reproduce with
+`env/bin/python scripts/capture_fault.py` on a configured vcan0, reserving source
+and unique number 238. The script independently assembles fast packets and
+checks raw field offsets. See [M7 model assumptions and scenarios](../FAULTS.md).
+
 `engine-default.log` is actual `candump -L` output, recorded during the
 2026-11-13 M0–M2 alignment work. It is not encoder-generated synthetic log text.
 The capture uses source address 205 (0xCD) to coexist with an existing source-35

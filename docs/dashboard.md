@@ -1,5 +1,8 @@
 # M5 — native NMEA 2000 engine instruments
 
+M7 adds oil temperature, fuel pressure, engine load, and received fault warnings.
+See [metrics, scenario commands, and model assumptions](FAULTS.md).
+
 A PySide6 / Qt Quick desktop application. It is an independent, receive-only
 SocketCAN or remote socketcand client using the same decoders as the console
 consumer. It imports no engine model or simulator state. M6 adds native CAN

@@ -10,11 +10,14 @@ from .engine_model import sample, sample_dynamic
 from . import pgn_127488, pgn_127489
 from .device import Device
 from .device_protocol import Name
+from .faults import FaultScenario
 
 
 def main(argv=None):
     logging.basicConfig(level=logging.INFO, format='%(levelname)s %(message)s')
     config = parse_config(argv)
+    fault = FaultScenario(config.fault, config.fault_start, config.fault_duration)
+    fault_stage = 'pending'
     try:
         name = Name(stable_unique_number(config), config.manufacturer_code,
                     config.device_instance, system_instance=config.system_instance)
@@ -42,6 +45,11 @@ def main(argv=None):
                         rapid_deadline = dynamic_deadline = now
                         rapid_tick = dynamic_tick = 0
                         logging.info('address_owned address=%d', device.address)
+                    elapsed = now - model_start
+                    stage = fault.stage(elapsed)
+                    if config.fault != 'none' and stage != fault_stage:
+                        logging.info('fault_%s name=%s elapsed=%.3f', stage, config.fault, elapsed)
+                        fault_stage = stage
                     if now >= rapid_deadline:
                         state = replace(sample(now - model_start), instance=config.engine_instance)
                         transmit(device.engine_message(pgn_127488.PGN, pgn_127488.encode(state)))
@@ -51,7 +59,7 @@ def main(argv=None):
                         if rapid_deadline <= now:
                             rapid_deadline = now + 1 / config.rapid_hz
                     if now >= dynamic_deadline:
-                        state = replace(sample_dynamic(now - model_start), instance=config.engine_instance)
+                        state = replace(sample_dynamic(elapsed, fault), instance=config.engine_instance)
                         transmit(device.engine_message(pgn_127489.PGN, pgn_127489.encode(state)))
                         dynamic_tick += 1
                         dynamic_deadline = schedule_start + dynamic_tick / config.dynamic_hz

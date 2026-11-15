@@ -17,13 +17,28 @@ def test_values_and_units_from_decoded_telemetry(state):
     store, _ = state
     store.accept(35, RapidUpdate(0, 3000, None, -4))
     store.accept(35, DynamicUpdate(coolant_temperature_k=353.15, alternator_voltage_v=14.2,
-                                 oil_pressure_pa=250000, fuel_rate_lph=12.3, engine_hours=100))
+                                 oil_pressure_pa=250000, fuel_rate_lph=12.3, engine_hours=100,
+                                 oil_temperature_k=363.15, fuel_pressure_pa=300000, engine_load_pct=75))
     view = store.view('35:0')
     assert view['status'] == 'fresh'
     assert view['rpm'] == 3000 and view['running'] == 'Running'
     assert view['temperature_c'] == pytest.approx(80)
     assert view['oil_pressure_bar'] == 2.5
     assert view['engine_hours'] == 100 and view['trim'] == -4
+    assert view['oil_temperature_c'] == pytest.approx(90)
+    assert view['fuel_pressure_bar'] == 3
+    assert view['engine_load_pct'] == 75
+
+
+@pytest.mark.parametrize('mode', ['missing', 'stale', 'disconnected'])
+def test_new_metrics_do_not_show_false_zero(state, mode):
+    store, now = state
+    store.accept(35, DynamicUpdate() if mode == 'missing' else DynamicUpdate(
+        oil_temperature_k=350, fuel_pressure_pa=300000, engine_load_pct=50))
+    if mode == 'stale':
+        now[0] = 3
+    view = store.view('35:0', connected=mode != 'disconnected')
+    assert all(view[key] is None for key in ('oil_temperature_c', 'fuel_pressure_bar', 'engine_load_pct'))
 
 
 def test_missing_is_not_zero(state):

@@ -90,8 +90,8 @@ def test_dynamic_model():
     assert cruise.oil_pressure_pa > idle.oil_pressure_pa
     assert cruise.fuel_rate_lph > idle.fuel_rate_lph
     assert cruise.engine_hours == 100 + 13/3600
-    assert idle.oil_temperature_k is None and idle.coolant_pressure_pa is None
-    assert idle.fuel_pressure_pa is None and idle.engine_load_pct is None
+    assert idle.oil_temperature_k == 293.15 and idle.coolant_pressure_pa is None
+    assert idle.fuel_pressure_pa == 0 and idle.engine_load_pct == 0
     assert idle.engine_torque_pct is None
     assert idle.status1 == idle.status2 == 0
 

@@ -19,6 +19,7 @@ Item {
     onHeightChanged: dial.requestPaint()
     Canvas {
         id: dial
+        visible: gauge.height >= 240
         anchors.fill: parent
         onPaint: {
             var c = getContext("2d"); c.reset();
@@ -55,10 +56,10 @@ Item {
     }
     Column {
         anchors.horizontalCenter: parent.horizontalCenter
-        y: parent.height*0.66
+        y: parent.height < 240 ? Math.max(0, (parent.height - height)/2 - 10) : parent.height*0.60
         spacing: 3
         Text { anchors.horizontalCenter: parent.horizontalCenter; text: gauge.available ? Number(gauge.reading).toFixed(gauge.decimals) : "--"; color: "#f1fbff"; font.pixelSize: gauge.width>360?44:34; font.weight: Font.DemiBold }
         Text { anchors.horizontalCenter: parent.horizontalCenter; text: gauge.unit; color: gauge.accent; font.pixelSize: 12; font.letterSpacing: 2 }
     }
-    Text { anchors.horizontalCenter: parent.horizontalCenter; y: parent.height*0.91; text: gauge.title; color: "#9cb8c7"; font.pixelSize: 11; font.letterSpacing: 2 }
+    Text { anchors.horizontalCenter: parent.horizontalCenter; y: Math.min(parent.height*0.91, parent.height - height); text: gauge.title; color: "#9cb8c7"; font.pixelSize: 11; font.letterSpacing: 2 }
 }

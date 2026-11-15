@@ -36,7 +36,7 @@ def batch(events, **kwargs):
     return {'frames': events, 'received': len(events), 'malformed': 0, 'dropped': 0, 'fast_errors': {}, **kwargs}
 
 
-def test_native_qml_gauge_and_fast_packet_updates(app):
+def test_native_qml_gauge_and_fast_packet_updates(app, tmp_path):
     config = DashboardConfig()
     backend = DashboardBackend(config)
     backend.on_connection('connected', 'test virtual input')
@@ -54,7 +54,8 @@ def test_native_qml_gauge_and_fast_packet_updates(app):
         gauge = root.findChild(QObject, 'rpmGauge')
         assert gauge.property('reading') == 3000
         assert backend.view['temperature_c'] is None
-        payload = encode_dynamic(DynamicUpdate(coolant_temperature_k=353.15, alternator_voltage_v=14.2))
+        payload = encode_dynamic(DynamicUpdate(coolant_temperature_k=353.15, alternator_voltage_v=14.2,
+            oil_temperature_k=363.15, fuel_pressure_pa=300000, engine_load_pct=75))
         frames = fragment(payload, 0)
         for data in frames[:-1]:
             message = packet(127489, data)
@@ -64,11 +65,21 @@ def test_native_qml_gauge_and_fast_packet_updates(app):
         backend.on_batch(batch([ReceivedFrame(message, decoder.receive(message))]))
         app.processEvents()
         assert root.findChild(QObject, 'temperatureGauge').property('reading') == pytest.approx(80)
+        assert root.findChild(QObject, 'oilTemperatureTile').property('reading') == pytest.approx(90, abs=.05)
+        assert root.findChild(QObject, 'fuelPressureTile').property('reading') == 3
+        assert root.findChild(QObject, 'engineLoadTile').property('reading') == 75
         assert gauge.property('reading') == 3000
         assert backend.view['status'] == 'fresh'
         QTest.qWait(350)
         assert gauge.property('displayed') == pytest.approx(3000, abs=1)
         assert root.grabWindow().width() == 1280
+        root.setWidth(940)
+        root.setHeight(700)
+        QTest.qWait(50)
+        for name in ('oilTemperatureTile', 'fuelPressureTile', 'engineLoadTile'):
+            tile = root.findChild(QObject, name)
+            assert tile.width() >= 200 and tile.height() >= 108
+        assert root.grabWindow().save(str(tmp_path / 'dashboard.png'))
         root.setProperty('diagnosticsOpen', True)
         QTest.qWait(50)
         assert root.findChild(QObject, 'diagnosticList').property('count') == 5

@@ -71,6 +71,9 @@ Malformed payloads are logged and ignored.
 
 ## Configuration
 
+Additional oil temperature, fuel pressure, engine load, and selectable fault
+scenarios: [M7 metrics and faults](docs/FAULTS.md).
+
 CLI overrides environment, which overrides defaults. `.env.example` is a
 template, not automatically loaded. Both entrypoints share the parser.
 

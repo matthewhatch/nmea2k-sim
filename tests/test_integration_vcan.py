@@ -88,7 +88,7 @@ def test_independent_processes(vcan, tmp_path):
         assert len(records) == 41 and len(dynamic) == 9
         from nmea_sim.fast_packet import Reassembler
         from nmea_sim.pgn_127489 import decode
-        assert all(record['oil_temperature_k'] is None for record in dynamic)
+        assert all(record['oil_temperature_k'] >= 293.1 for record in dynamic)
         assert all(record['active_status'] == [] for record in dynamic)
         frames = []
         while (frame := vcan.recv(.05)) is not None:

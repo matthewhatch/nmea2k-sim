@@ -3,6 +3,7 @@ import argparse
 import os
 import re
 from dataclasses import dataclass
+from .faults import FAULT_NAMES, FaultScenario
 
 
 @dataclass(frozen=True)
@@ -20,6 +21,9 @@ class Config:
     system_instance: int = 0
     engine_instance: int = 0
     device_key: str = 'engine-0'
+    fault: str = 'none'
+    fault_start: float = 20.0
+    fault_duration: float = 10.0
 
 
 def parse_config(argv=None) -> Config:
@@ -37,7 +41,14 @@ def parse_config(argv=None) -> Config:
     parser.add_argument('--allow-physical-tx', action='store_true')
     parser.add_argument('--count', type=int, help='exit after this many rapid TX frames or decoded RX messages')
     parser.add_argument('--timeout', type=float, default=5.0, help='receiver inactivity timeout in seconds')
+    parser.add_argument('--fault', choices=FAULT_NAMES, default='none')
+    parser.add_argument('--fault-start', type=float, default=20.0, help='fault start in model seconds, once per run')
+    parser.add_argument('--fault-duration', type=float, default=10.0, help='fault duration in model seconds')
     args = parser.parse_args(argv)
+    try:
+        FaultScenario(args.fault, args.fault_start, args.fault_duration)
+    except ValueError as exc:
+        parser.error(str(exc))
     try:
         validate_channel(args.channel)
     except ValueError as exc:
